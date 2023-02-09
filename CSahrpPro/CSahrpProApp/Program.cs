@@ -6,7 +6,8 @@ namespace DataTypes
     {
         static void Main()
         {
-            ExplainNumbers();
+            //ExplainNumbers();
+            ExplainString();
         }
 
         /// <summary>
@@ -72,6 +73,41 @@ namespace DataTypes
             /// Scientific Notation
             /// Use E to indicate the power of 10 as exponent part of scientific notation with float, double or decimal.
             double num12 = 54646E10;
+        }
+
+        /// <summary>
+        /// A string : string is a series of characters, surrounded  by ""
+        /// a string is a collection or an array of characters 
+        /// </summary>
+        static void ExplainString ()
+        {
+            string message = "Welcome to CSahrpPro tutorials";
+            Console.WriteLine(message);
+
+            foreach (var charachter in message)
+            {
+                Console.WriteLine(charachter);
+            }
+
+            /// We need to use escape character with some special characters like : 
+            /// \, \n \\ \t, \"
+            string intoduction = "Hello my name is \"John\"";
+            Console.WriteLine(intoduction);
+
+            /// Verbatim String : Verbatim string in C# ignores a special characters and line brakes, it can also use to create 
+            /// multi-lines strings
+            string moreInfo = @"And my family name is ""Doe\"".";
+            Console.WriteLine(moreInfo);
+
+            /// String concatenation using + 
+            string firstName = "John";
+            string lastName = "Doe";
+
+            Console.WriteLine("My full name is " + firstName + " " + lastName);
+
+            /// String interpolation
+            /// Note :use two braces, "{{" or "}}" to include { or } in a string.
+            Console.WriteLine($"My full name is {{ {firstName} {lastName} }}");
         }
     }
 }
